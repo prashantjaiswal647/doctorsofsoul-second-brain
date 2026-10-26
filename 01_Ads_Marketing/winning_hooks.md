@@ -1,29 +1,25 @@
-# Winning Hooks for Ads & Marketing
+# Winning Hooks for Ads & Marketing (Laser Focus: ₹9 Book)
 
-**Status:** Ratified for Meta & Google Ads  
-**Cross-References:** [[HOME_DASHBOARD]], [[active_campaign_drafts]], [[icp_consciousness_ladder]], [[campaign_rules]]  
-
----
-
-## 🎯 Tier A: 1:1 Clarity Session Hooks (Meeting Engine)
-
-### Angle A: Advaita & Nervous System Regulation
-> *"जब तक नर्वस सिस्टम ओवर-एक्टिव है, वास्तविक मानसिक स्पष्टता असंभव है।"*  
-> *(English: "Until the nervous system is regulated, true mental clarity is impossible.")*
-
-### Angle B: Youth Roadmap 2027 & Career Anxiety
-> *"AI के इस युग में आपका व्यक्तिगत ब्लूप्रिंट — क्या आप तैयार हैं विकसित भारत 2027 के लिए?"*  
-> *(English: "Your personal blueprint in the age of AI — Are you ready for Vikasit Bharat 2027?")*
-
-### Core Value Proposition (Anchor Offer):
-> *"Book 1:1 Clarity Session with Prashant Jaiswal & Get All 4 Foundational Books Free."*
+**Primary Offer:** *"एस्ट्रोलॉजर ऑफ़ सोल"* (`https://doctorsofsoul.co.in/hi/books/kundli-se-aatma-tak`)  
+**Cross-References:** [[HOME_DASHBOARD]], [[active_campaign_drafts]], [[campaign_rules]]  
 
 ---
 
-## ⚡ Tier B: Front-End ₹9 Tripwire Hooks (Astrology to Soul)
+## ⚡ Primary Winning Hooks (Astrology to Soul Entry Gate)
 
-### The "Predictions vs Action" Bridge
+### Hook 1 (The Predictions vs Action Bridge):
 > *"कुंडली रास्ता दिखा सकती है, चलना तो आपको ही पड़ेगा। Stop Waiting For Planets. Start Moving."*
 
-### The Modern Rational Inquiry
+### Hook 2 (The Direct Reality Check):
+> *"ग्रहों की दशा जानने में साल मत लगाइए, अपने मन की दिशा आज ही बदलिए।"*
+
+### Hook 3 (For Modern Thinkers & Seekers):
 > *"Astrology told you WHEN. Who will tell you HOW? Shift from passive fate to conscious execution."*
+
+### Hook 4 (The Clarity Proposition):
+> *"समस्या आपके 10वें घर में नहीं, आपके अनियंत्रित विचारों में है। ₹9 में जानिए डायरेक्ट ऑब्जर्वेशन का विज्ञान।"*
+
+---
+
+## 🎁 Passive Backend Offer (On Thank-You Page):
+> *"₹9 बुक के साथ पाएं: 1:1 क्लैरिटी सेशन और 4-बुक बंडल का विशेष अपग्रेड अवसर।"*
