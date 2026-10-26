@@ -1,52 +1,49 @@
 # Campaign Operational Rules & Decision Framework
 
-**Status:** ACTIVE & RATIFIED (Post-Intake)  
-**Budget Tier:** Lean Discovery Mode (₹100/day)  
-**Core Conversion Asset:** Level 1 Tripwire Book (₹9 INR Domestic / $9 USD Global) → 1:1 Clarity Session Upsell  
-**Parent Framework:** [[funnel_architecture]]  
+**Status:** ACTIVE & RATIFIED (Multi-Tier Architecture)  
+**Parent Blueprint:** [[funnel_architecture]] | [[HOME_DASHBOARD]]  
 
 ---
 
-## 1. Unit Economics & CAC Boundaries
-- **Daily Testing Allocation:** ₹100 / day
-- **Target CAC (Book Purchase / Session):** ₹10.00 – ₹30.00 INR
-- **Hard CAC Ceiling:** ₹50.00 INR
-- **Daily Target Volume:** 2 to 10 purchases/bookings per ₹100 spent.
+## 🏛️ TIER A: Direct 1:1 Clarity Session Campaign (High-Ticket / Consultation)
+*Governs Direct Bookings at `doctorsofsoul.co.in/hi/meeting`*
+
+### 1. Budget & Allocation
+- **Daily Test Budget:** **₹500 / angle / day**
+- **Concurrent Active Angles:** Max 2 angles (Advaita/Nervous System vs. Roadmap 2027)
+
+### 2. Hard-Kill Protocol (Downside Protection)
+- **Hard-Kill Trigger:** Any ad set reaching **₹500 cumulative spend with 0 confirmed session bookings** is **AUTOMATICALLY PAUSED**.
+- **No manual extension** without creative angle overhaul.
+
+### 3. Scaling Engine (Upside Capture)
+- **Qualification Criteria:**
+  - **CAC (Cost per Booking) < ₹350 INR**
+  - **ROAS > 1.5x** (Accounting for 1:1 consultation fees and backend masterminds)
+- **Scale Increment:** **+20% daily budget increase** allowed every 48 hours as long as CAC holds below ₹350.
 
 ---
 
-## 2. Downside Protection: "Audit Before Kill" Protocol
-When cumulative ad spend on a creative hits **₹100 with 0 sales/bookings**, **DO NOT blind-kill**. Execute the following diagnostic tree:
+## 📦 TIER B: Front-End ₹9 Tripwire Book Campaign (Mass Top-of-Funnel)
+*Governs "एस्ट्रोलॉजर ऑफ़ सोल" at `doctorsofsoul.co.in/hi/books/kundli-se-aatma-tak`*
 
-```mermaid
-flowchart TD
-    SpendLimit["Spend reaches ₹100 with 0 Sales"] --> CheckCTR{"Link CTR >= 1.5% and CPC <= ₹5?"}
-    CheckCTR -- Yes --> InspectLP["Ad Copy is working. Inspect Landing Page drop-off & checkout friction. Continue ad."]
-    CheckCTR -- No --> CheckHook{"Impressions high but CTR < 1.0%?"}
-    CheckHook -- Yes --> SwapCreative["Headline/Hook fatigue or mismatch. Revise image text copy."]
-    CheckHook -- No --> KillAngle["Underlying angle rejected by algorithm/audience. Kill ad set."]
-```
+### 1. Budget & Allocation
+- **Daily Discovery Budget:** **₹100 / day** total (Lean Testing)
 
-### Diagnostic Decision Metrics:
-1. **Link Click-Through Rate (CTR):**
-   - `< 1.0%`: Hook/headline failure. Revise image text overlay in [[ad_copy_angles]].
-   - `> 1.8%`: Hook resonates; issue lies in landing page pitch or payment checkout flow.
-2. **Cost Per Click (CPC):**
-   - Benchmark Target: `<= ₹3.00 – ₹5.00 INR`.
-   - Alert Threshold: `> ₹8.00 INR` indicates poor audience targeting alignment. Cross-check [[icp_consciousness_ladder]].
-3. **Hard-Stop Spend:** If cumulative spend exceeds **₹200** with zero purchases after creative optimization, pause and pivot angle.
+### 2. "Audit Before Kill" Protocol
+- **Trigger:** Spend reaches **₹100 with 0 book sales**.
+- **Diagnostic Tree:**
+  - If Link CTR >= 1.5% and CPC <= ₹4: Ad copy is working; inspect landing page / Razorpay drop-off.
+  - If Link CTR < 1.0%: Hook failure; replace text overlay in [[ad_copy_angles]].
+  - Hard Stop: Pause only if cumulative spend reaches ₹200 with 0 conversions.
+
+### 3. Target Economics
+- **Target CAC:** ₹10.00 – ₹30.00 INR (Hard ceiling ₹50 INR).
+- **Backend Ascension:** ₹190 Bundle completion + 1:1 meeting booking.
 
 ---
 
-## 3. Creative Hierarchy & Format Protocol
-- **Stage 1 (Current):** High-contrast **Static Image + Text Overlay** (Minimal asset overhead, maximum copy clarity). Swipe templates in [[ad_copy_angles]].
-- **Stage 2 (Scale Gate):** Introduce **Short-Form Video Reels Hooks** only if static image CPMs spike or video CPC demonstrates lower CAC.
-
----
-
-### Connected Second Brain Nodes:
-- Central Command: [[HOME_DASHBOARD]]
-- Ledger: [[ad_spend_logs.csv]]
-- Engine Validator: [[validate_ledger.py]]
-- Creative Angles: [[ad_copy_angles]]
-- ICP Consciousness Ladder: [[icp_consciousness_ladder]]
+## 🤖 Directives for Claude Code & Cloud Automation
+1. When evaluating campaigns directed to `/hi/meeting`, apply **Tier A Rules** (₹500 kill / ₹350 CAC scale).
+2. When evaluating campaigns directed to `/hi/books/*`, apply **Tier B Rules** (₹100 test / ₹10–₹50 CAC).
+3. Always update [[ad_spend_logs.csv]] before triggering any scale/pause decision.
