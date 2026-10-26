@@ -8,6 +8,13 @@ import csv
 import sys
 from pathlib import Path
 
+# Fix Windows console encoding for UTF-8 currency symbols
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 REQUIRED_HEADERS = [
     "date",
     "campaign_name",
@@ -20,6 +27,12 @@ REQUIRED_HEADERS = [
     "roas",
 ]
 
+def format_currency(val: float) -> str:
+    try:
+        return f"₹{val:,.2f}"
+    except Exception:
+        return f"INR {val:,.2f}"
+
 def validate_and_analyze(csv_path: Path):
     if not csv_path.exists():
         print(f"[ERROR] Ledger file not found at: {csv_path}")
@@ -31,6 +44,8 @@ def validate_and_analyze(csv_path: Path):
     total_revenue = 0.0
     row_count = 0
     errors = []
+
+    angle_stats = {}
 
     with open(csv_path, mode="r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -65,12 +80,21 @@ def validate_and_analyze(csv_path: Path):
                 total_bookings += bookings
                 total_revenue += revenue
 
+                # Aggregate by angle
+                angle = row["angle"]
+                if angle not in angle_stats:
+                    angle_stats[angle] = {"spend": 0.0, "clicks": 0, "bookings": 0, "revenue": 0.0}
+                angle_stats[angle]["spend"] += spend
+                angle_stats[angle]["clicks"] += clicks
+                angle_stats[angle]["bookings"] += bookings
+                angle_stats[angle]["revenue"] += revenue
+
             except ValueError as ve:
                 errors.append(f"Line {line_num}: Type conversion error ({ve})")
 
-    print("\n" + "=" * 50)
+    print("\n" + "=" * 60)
     print("DOCTORS OF SOUL - AD SPEND LEDGER SUMMARY")
-    print("=" * 50)
+    print("=" * 60)
     print(f"File Path        : {csv_path.resolve()}")
     print(f"Total Rows Logged: {row_count}")
 
@@ -86,17 +110,26 @@ def validate_and_analyze(csv_path: Path):
         avg_cpc = (total_spend / total_clicks) if total_clicks > 0 else 0.0
         overall_roas = (total_revenue / total_spend) if total_spend > 0 else 0.0
 
-        print("-" * 50)
-        print(f"Total Spend      : ₹{total_spend:,.2f}")
+        print("-" * 60)
+        print(f"Total Spend      : {format_currency(total_spend)}")
         print(f"Total Clicks     : {total_clicks:,}")
-        print(f"Total Bookings   : {total_bookings:,}")
-        print(f"Total Revenue    : ₹{total_revenue:,.2f}")
-        print(f"Average CPC      : ₹{avg_cpc:,.2f}")
-        print(f"Effective CAC    : ₹{avg_cac:,.2f}" if total_bookings > 0 else "Effective CAC    : N/A (0 bookings)")
-        print(f"Aggregate ROAS   : {overall_roas:.2f}x")
+        print(f"Total Bookings   : {total_bookings:,} sales")
+        print(f"Total Revenue    : {format_currency(total_revenue)}")
+        print(f"Blended CPC      : {format_currency(avg_cpc)}")
+        print(f"Blended CAC      : {format_currency(avg_cac)}" if total_bookings > 0 else "Blended CAC      : N/A (0 bookings)")
+        print(f"Front-End ROAS   : {overall_roas:.2f}x")
+        print("-" * 60)
+        print("PERFORMANCE BY CREATIVE ANGLE:")
+        for angle, data in angle_stats.items():
+            a_cac = (data["spend"] / data["bookings"]) if data["bookings"] > 0 else 0.0
+            a_cpc = (data["spend"] / data["clicks"]) if data["clicks"] > 0 else 0.0
+            a_roas = (data["revenue"] / data["spend"]) if data["spend"] > 0 else 0.0
+            print(f"\n* Angle: {angle}")
+            print(f"  - Spend: {format_currency(data['spend'])} | Sales: {data['bookings']} | Revenue: {format_currency(data['revenue'])}")
+            print(f"  - CPC: {format_currency(a_cpc)} | CAC: {format_currency(a_cac)} | ROAS: {a_roas:.2f}x")
     else:
         print("\nLedger is currently empty (ready for intake data logging).")
-    print("=" * 50 + "\n")
+    print("=" * 60 + "\n")
 
 if __name__ == "__main__":
     default_csv = Path(__file__).resolve().parent.parent / "02_Budget_Finances" / "ad_spend_logs.csv"

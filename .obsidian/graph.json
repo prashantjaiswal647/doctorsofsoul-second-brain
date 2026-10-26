@@ -1,10 +1,6 @@
 {
   "collapse-filter": false,
   "search": "",
-  "localJumps": 1,
-  "localBacklinks": true,
-  "localForelinks": true,
-  "localInterlinks": false,
   "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -56,5 +52,7 @@
   "centerStrength": 0.518,
   "repelStrength": 10,
   "linkStrength": 1,
-  "linkDistance": 250
+  "linkDistance": 250,
+  "scale": 1,
+  "close": false
 }
