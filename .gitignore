@@ -1,0 +1,16 @@
+# OS & Environment
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Obsidian workspace layout (preserves custom graph.json and app.json, ignores temporary local workspace state)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json

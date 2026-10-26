@@ -1,0 +1,60 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "localJumps": 1,
+  "localBacklinks": true,
+  "localForelinks": true,
+  "localInterlinks": false,
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:00_Brain_Core",
+      "color": {
+        "a": 1,
+        "rgb": 10567679
+      }
+    },
+    {
+      "query": "path:01_Ads_Marketing",
+      "color": {
+        "a": 1,
+        "rgb": 16744448
+      }
+    },
+    {
+      "query": "path:02_Budget_Finances",
+      "color": {
+        "a": 1,
+        "rgb": 3394662
+      }
+    },
+    {
+      "query": "path:03_Reports_Insights",
+      "color": {
+        "a": 1,
+        "rgb": 38143
+      }
+    },
+    {
+      "query": "path:06_Engine_Local",
+      "color": {
+        "a": 1,
+        "rgb": 15733524
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.25,
+  "lineSizeMultiplier": 1.1,
+  "collapse-forces": false,
+  "centerStrength": 0.518,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250
+}
