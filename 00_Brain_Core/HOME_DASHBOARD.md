@@ -20,17 +20,19 @@ graph TD
     Core --> UserProfile["[[user_profile]]"]
     Core --> Soul["[[soul]]"]
     Core --> Funnel["[[funnel_architecture]]"]
+    Core --> AdspirerProto["[[adspirer_cloud_protocol]]"]
 
     Marketing --> Rules["[[campaign_rules]]"]
     Marketing --> Ladder["[[icp_consciousness_ladder]]"]
+    Marketing --> CreativeBrief["[[cross_platform_creative_brief]]"]
     Marketing --> Angles["[[ad_copy_angles]]"]
 
     Finance --> SpendLogs["[[ad_spend_logs.csv]]"]
     Engine --> Validator["[[validate_ledger.py]]"]
 
-    Ladder -.-> Angles
-    Angles -.-> Rules
-    Funnel -.-> Rules
+    AdspirerProto -.-> Rules
+    CreativeBrief -.-> Rules
+    Ladder -.-> CreativeBrief
     Rules -.-> SpendLogs
     SpendLogs -.-> Validator
 ```
@@ -43,17 +45,19 @@ graph TD
 - [[user_profile]] — Executive identity, mission parameters, and philosophical charter.
 - [[soul]] — Brand voice, tonal rules, and foundational book manifesto.
 - [[funnel_architecture]] — The ₹9 Domestic / $9 Global Tripwire mechanics and backend value ascension.
+- [[adspirer_cloud_protocol]] — **Rules of Engagement for Claude Code**: 15 Adspirer calls conservation, Meta + Google allocation, and the 10x Flywheel Scaling Gate.
 
 ### 2. [[01_Ads_Marketing]]
+- [[cross_platform_creative_brief]] — Low-cost, high-impression creative blueprints for Meta (Instagram/FB) & Google Ads (Group A & Group B).
 - [[icp_consciousness_ladder]] — The 4-Stage Consciousness Funnel (Astrology Seeker → Agency → Egoless Action → AI Financial Sovereignty).
 - [[campaign_rules]] — The ₹100/day lean operational parameters, CAC boundaries, and "Audit Before Kill" logic.
 - [[ad_copy_angles]] — High-converting static image-text copy swipe files.
 
 ### 3. [[02_Budget_Finances]]
-- [[ad_spend_logs.csv]] — Daily ad spend ledger.
+- [[ad_spend_logs.csv]] — Clean daily ad spend ledger (ready for live Adspirer data ingest).
 
 ### 4. [[03_Reports_Insights]]
 - Daily decision memos, creative post-mortems, and performance reviews.
 
 ### 5. [[06_Engine_Local]]
-- [[validate_ledger.py]] — Zero-dependency local Python analytics validator.
+- [[validate_ledger.py]] — Zero-dependency local Python analytics validator (Windows UTF-8 hardened).
