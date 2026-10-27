@@ -3,6 +3,7 @@
 **Lead Executive:** [[user_profile|Prashant Jaiswal]]  
 **Domain:** [doctorsofsoul.co.in](https://doctorsofsoul.co.in)  
 **Philosophical Engine:** [[soul]]  
+**Budget Conflict:** **RESOLVED 2026-10-27** — owner chose Option A: ₹100/day total, Hindi Meta only, 7 days, static03 creative only.
 
 ---
 

@@ -1,7 +1,7 @@
 # 2026-10-27 — Truth Pass (verified status)
 
 **Status:** CURRENT as of 2026-10-27. Numbers here were checked against the live site and Git, not copied from older notes.
-**Repo copy (Hindi, detailed):** `docs/CURRENT-STATUS-2026-10-27-HI.md` in the `doctorsofsoul` repo.
+**Repo copy:** `docs/CURRENT-STATUS-2026-10-27-HI.md` was planned but is not in the repo; this note is the current status.
 
 Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[active_campaign_drafts]], [[funnel_architecture]], [[campaign_v2_plan_2026-10-27]].
 
@@ -13,7 +13,7 @@ Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[active_campaign_draf
 |---|---|
 | Site | https://doctorsofsoul.co.in — `/hi` 200 |
 | Payments | Razorpay **live** (`payment_mode: razorpay`, production) |
-| Razorpay Live webhook | **UNPROVEN** — owner must show dashboard delivery history |
+| Razorpay Live webhook | **delivery observed 2026-10-24 (owner screenshots)** — only `payment.captured` and `order.paid` evidenced |
 | Email / Google | both `live` |
 | Meeting | 15 min, **₹999** India / **$53** international, bookings open, 15-min hold |
 | GA4 | `G-695DZ3HPT1` present |
@@ -37,13 +37,13 @@ Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[active_campaign_draf
 
 1. **[[2026-10-26_decision_memo]] is UNVERIFIED.** ₹700 spend, 24 sales, ₹29.17 CAC, CPC and angle breakdown have no ledger or platform export behind them. `ad_spend_logs.csv` has only a header. The Adspirer log says quota 15/15, **no campaigns created, zero spend**. A banner was added to the memo.
 2. **₹1,000 meeting fee was wrong.** Live fee is ₹999 / $53. Fixed in [[campaign_rules]].
-3. **Budget conflict is open.** [[campaign_rules]] working copy says ₹400/day (4 × ₹100); [[funnel_architecture]] and the last vault commit say ₹100/day total. Owner decision required. No number was changed.
+3. **Budget conflict RESOLVED 2026-10-27.** Owner chose Option A: ₹100/day total, Hindi Meta only, 7 days, static03 creative only. [[campaign_rules]], [[funnel_architecture]], and [[campaign_v2_plan_2026-10-27]] all updated.
 4. **UTM violations.** [[active_campaign_drafts]] destinations use `utm_medium=cpc` and `utm_campaign=in_hi_funnel` / `gl_en_funnel`, which violate `docs/UTM-CONVENTION-HI.md`. They are kept as history; corrected links live in [[campaign_v2_plan_2026-10-27]].
-5. **PR #59** looks stale (its work was superseded by merged PR #61). Closing it is a coordinator/owner decision.
+5. **PR #59 closed 2026-10-27** (superseded by PR #61, owner decision). **PR #63 merged** (feat: campaign v2 creatives, creative registry and ledger). **PR #64 merged and deployed** (fix: technical SEO + UTM; `/sitemap.xml` 200).
 
 ## 5. What changed on 2026-10-27
 
-- Added the repo status page `docs/CURRENT-STATUS-2026-10-27-HI.md`.
+- Planned a repo status page `docs/CURRENT-STATUS-2026-10-27-HI.md` (never committed).
 - Corrected prices and UTM links in `marketing/ads.md`; added a historical-status banner.
 - Added the UNVERIFIED banner to [[2026-10-26_decision_memo]].
 - Fixed ₹1,000 → ₹999 in [[campaign_rules]].

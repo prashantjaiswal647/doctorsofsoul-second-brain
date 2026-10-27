@@ -1,8 +1,10 @@
 # Creative Registry & Performance Ledger (2026-10-27)
 
 **Status:** CURRENT — system बना और test हुआ, पर **data शून्य है**: 0 runs, 0 spend, 0 orders.
-**Repo branch:** `feat/book-pitch-and-meeting-copy` · commits `525aa9e` (ledger system), `0e82b58` (static01/02 copy revision, 1080×1080), `7ce5038` + `895b525` (static05 safe-copy test and revision), `c5661a7` (owner final Hindi creative; static01 archived), `2e1e458` (static02 archived — approved file removed)
+**Repo branch:** `feat/book-pitch-and-meeting-copy` (merged as PR #63) · commits `525aa9e` (ledger system), `0e82b58` (static01/02 copy revision, 1080×1080), `7ce5038` + `895b525` (static05 safe-copy test and revision), `c5661a7` (owner final Hindi creative; static01 archived), `2e1e458` (static02 archived — approved file removed)
 **Files:** `marketing/creative-registry.csv`, `marketing/creative-performance.csv`, `marketing/CREATIVE-LEDGER-HI.md`, `deploy/devtools/creative_report.py`, `backend/tests/test_creative_ledger.py`.
+
+**OWNER DECISION 2026-10-27:** Option A — ₹100/day total, Hindi Meta only, 7 days, **static03 only**. `static05` NOT in first launch. `static02` archived pending reissue. Budget conflict **RESOLVED**.
 
 Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[campaign_v2_plan_2026-10-27]], [[2026-10-27_truth_pass]], [[ad_spend_logs.csv]].
 

@@ -1,51 +1,44 @@
 # Campaign Operational Rules & Decision Framework
 
-**Status:** ACTIVE & RATIFIED (Multi-Bucket Test Launch)  
+**Status:** ACTIVE & RATIFIED (Multi-Bucket Test Launch — **OWNER DECISION 2026-10-27: Option A — ₹100/day total, Hindi Meta only, 7 days**)  
 **Core Mission:** Validate ₹9 Book Tripwire across GEO/Locale/Platform segments  
 **Primary Conversion Asset:** *"एस्ट्रोलॉजर ऑफ़ सोल"* (`https://doctorsofsoul.co.in/hi/books/kundli-se-aatma-tak`)  
-**Cross-References:** [[HOME_DASHBOARD]], [[icp_consciousness_ladder]], [[active_campaign_drafts]]  
+**Cross-References:** [[HOME_DASHBOARD]], [[icp_consciousness_ladder]], [[active_campaign_drafts]]
 
 ---
 
-## 1. Budget Discipline & Testing Window (Strict 10-Day Lockdown)
-- **Total Daily Ad Spend:** Strictly **₹400 / day** (₹100 per bucket, total).
-- **Mandatory Discovery Window:** **10 Days Minimum** (2026-10-26 to 2026-11-05).
-  - Claude Code or any automation is **FORBIDDEN** from increasing or changing the budget during this 10-day period.
-  - The objective is pure data collection, audience discovery, and creative angle testing across buckets.
+## 1. Budget Discipline & Testing Window (Strict 7-Day Lockdown — **RESOLVED 2026-10-27**)
+- **Total Daily Ad Spend:** Strictly **₹100 / day total** (Hindi Meta only, single bucket).
+- **Creative:** **static03 only** (`campaign_v2_hindi_1x1.png`) — `static05` is **NOT** part of the first launch.
+- **Mandatory Discovery Window:** **7 Days Minimum** (from actual launch date).
+  - Claude Code or any automation is **FORBIDDEN** from increasing or changing the budget during this 7-day period.
+  - The objective is pure data collection, audience discovery, and creative angle testing.
 - **Budget Scaling Gate:**
-  - Any budget increase will ONLY be considered **after day 10**, post-analysis of real conversion rates, CPC, and checkout drop-offs.
+  - Any budget increase will ONLY be considered **after day 7**, post-analysis of real conversion rates, CPC, and checkout drop-offs.
 
 ---
 
-## 2. Multi-Bucket Test Matrix (4 x ₹100/day = ₹400/day Total)
+## 2. Single-Bucket Test Matrix (₹100/day Total — **RESOLVED 2026-10-27**)
 
-This matrix enforces strict isolation and budget caps for each test bucket.
+This matrix enforces strict isolation and budget caps for the single test bucket.
 
-### 2.1 IN_HI_META (India / Hindi / Meta Ads)
+### 2.1 IN_HI_META (India / Hindi / Meta Ads) — **ONLY BUCKET FOR FIRST LAUNCH**
 - **Daily Cap:** ₹100
 - **Target Audience:** India, Hindi-speaking, Meta platforms.
 - **Conversion Goal:** ₹9 Book Purchase (kundli-se-aatma-tak)
+- **Creative:** `static03` — "कुंडली मौसम बता सकती है, नाव आपको चलानी है" (brand-safe, PASS)
 
-### 2.2 IN_HI_GOOGLE (India / Hindi / Google Ads)
-- **Daily Cap:** ₹100
-- **Target Audience:** India, Hindi-speaking, Google platforms.
-- **Conversion Goal:** ₹9 Book Purchase (kundli-se-aatma-tak)
-
-### 2.3 GLOBAL_EN_META (USA, UK / English / Meta Ads)
-- **Daily Cap:** ₹100
-- **Target Audience:** USA, UK, English-speaking, Meta platforms.
-- **Conversion Goal:** ₹9 Book Purchase (kundli-se-aatma-tak)
-
-### 2.4 GLOBAL_EN_GOOGLE (USA, UK / English / Google Ads)
-- **Daily Cap:** ₹100
-- **Target Audience:** USA, UK, English-speaking, Google platforms.
-- **Conversion Goal:** ₹9 Book Purchase (kundli-se-aatma-tak)
+**The following buckets are NOT part of the first launch (owner decision 2026-10-27):**
+- ~~IN_HI_GOOGLE (India / Hindi / Google Ads)~~ — deferred
+- ~~GLOBAL_EN_META (USA, UK / English / Meta Ads)~~ — deferred
+- ~~GLOBAL_EN_GOOGLE (USA, UK / English / Google Ads)~~ — deferred
+- ~~static05 creative~~ — not in first launch
 
 ---
 
 ## 3. Core Funnel Mechanics: Book First, Meeting as Upsell Bonus
 ```
-[Paid Ad: ₹400/day total, split across 4 buckets]
+[Paid Ad: ₹100/day total, single bucket]
    │
    ▼
 [Landing Page: /hi/books/kundli-se-aatma-tak] ──▶ Goal: ₹9 Book Purchase (Core Conversion)
@@ -57,7 +50,6 @@ This matrix enforces strict isolation and budget caps for each test bucket.
 ```
 
 ---
-
 
 ## 4. Primary Conversion Tracking Hierarchy (Funnel Metrics)
 

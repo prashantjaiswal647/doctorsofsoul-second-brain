@@ -68,12 +68,12 @@ Design: deep indigo (#2a1a45) night sky with faint star-chart lines, warm-cream/
 
 ---
 
-## 5. Budget — owner decision, not made here
+## 5. Budget — **OWNER DECISION 2026-10-27: Option A**
 
 | Option | Structure | When it makes sense |
 |---|---|---|
-| **A (recommended first)** | **₹100/day total**, Hindi Meta only, 7 days | Cheapest clean read on hook + landing + checkout; one variable at a time |
-| **B** | **₹400/day** = 4 × ₹100 (IN_HI_META, IN_HI_GOOGLE, GLOBAL_EN_META, GLOBAL_EN_GOOGLE) | Only if the owner confirms ₹400/day and both account currencies; otherwise the four buckets cannot be compared |
+| **A (SELECTED 2026-10-27)** | **₹100/day total**, Hindi Meta only, 7 days, **static03 creative only** | Cheapest clean read on hook + landing + checkout; one variable at a time |
+| **B (DEFERRED)** | **₹400/day** = 4 × ₹100 (IN_HI_META, IN_HI_GOOGLE, GLOBAL_EN_META, GLOBAL_EN_GOOGLE) | Only if the owner confirms ₹400/day and both account currencies; otherwise the four buckets cannot be compared |
 
 Rules either way:
 
