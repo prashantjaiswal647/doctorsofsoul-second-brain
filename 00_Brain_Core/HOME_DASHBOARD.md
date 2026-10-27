@@ -161,8 +161,8 @@ Repo: `C:\Users\ASUS\Desktop\doctorsofsoul` · repo status page: not committed t
 ## ⏳ Open decisions (owner)
 
 1. **Budget:** **RESOLVED 2026-10-27** — Option A: ₹100/day total, Hindi Meta only, 7 days, static03 creative only.
-2. ~~Merge PR #64~~ done 2026-10-27. Still to confirm on the server: `SITE_URL` and `ADMIN_PATH`.
-3. Razorpay Live webhook delivery history.
+2. ~~Merge PR #64~~ done 2026-10-27. PR #65 (launch sheet) and PR #66 (ledger how-to) also merged; main `f129c69`. Still to do on the server: set `ADMIN_PATH` (`/admin` currently returns a 200 shell page; data API is 401). `SITE_URL` is correct (sitemap shows only https://doctorsofsoul.co.in).
+3. Razorpay Live webhook: delivery observed 2026-10-24 (payment.captured and order.paid, HTTP 200); other events not yet evidenced.
 4. Meta review → `META_TRACKING_ENABLED`.
 5. Any real campaign creation or spend (blocked by 4; Adspirer resets 2026-11-19).
 6. **PR #59 closed 2026-10-27** (superseded by PR #61, owner decision).

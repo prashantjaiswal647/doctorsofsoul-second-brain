@@ -54,7 +54,10 @@ Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[active_campaign_draf
 
 **Deploy check:** production must set `SITE_URL=https://doctorsofsoul.co.in`; otherwise canonical and sitemap URLs emit `http://localhost:3000`.
 
+- 2026-10-27 13:15Z: **PR #65 merged** (Hindi Ads Manager launch sheet) and **PR #66 merged** (daily ledger commands). main `f129c69`, deploy success, no open PRs. Still open: `ADMIN_PATH` not set on the server (`/admin` shell page 200, data API 401), ledger source-of-truth decision, Meta funds/Pixel/CAPI, campaign creation.
+
 ## 6. Open owner decisions
+
 
 - Ad budget: ₹100/day total or ₹400/day (4 × ₹100)?
 - Push/merge `fix/technical-seo-and-utm` and the ad-creatives branch.
