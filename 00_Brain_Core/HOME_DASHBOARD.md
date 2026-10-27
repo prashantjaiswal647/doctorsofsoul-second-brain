@@ -50,14 +50,16 @@ graph TD
 ### 2. [[01_Ads_Marketing]]
 - [[cross_platform_creative_brief]] — Low-cost, high-impression creative blueprints for Meta (Instagram/FB) & Google Ads (Group A & Group B).
 - [[icp_consciousness_ladder]] — The 4-Stage Consciousness Funnel (Astrology Seeker → Agency → Egoless Action → AI Financial Sovereignty).
-- [[campaign_rules]] — The ₹100/day lean operational parameters, CAC boundaries, and "Audit Before Kill" logic.
+- [[campaign_rules]] — Operational rules and "Audit Before Kill" logic. **Budget split is an open owner decision** (₹100/day total vs ₹400/day = 4 × ₹100); see [[2026-10-27_truth_pass]].
 - [[ad_copy_angles]] — High-converting static image-text copy swipe files.
+- [[campaign_v2_plan_2026-10-27]] — Prepared campaign v2: 2 brand-aligned creatives, corrected UTMs, paused-only launch. Zero spend.
 
 ### 3. [[02_Budget_Finances]]
 - [[ad_spend_logs.csv]] — Clean daily ad spend ledger (ready for live Adspirer data ingest).
 
 ### 4. [[03_Reports_Insights]]
-- Daily decision memos, creative post-mortems, and performance reviews.
+- [[2026-10-27_truth_pass]] — **Current verified status** (live prices, meeting fee, tracking, code/tests, open decisions).
+- [[2026-10-26_decision_memo]] — **UNVERIFIED**: its ₹700 spend / 24 sales / CAC figures have no ledger behind them.
 
 ### 5. [[06_Engine_Local]]
 - [[validate_ledger.py]] — Zero-dependency local Python analytics validator (Windows UTF-8 hardened).
