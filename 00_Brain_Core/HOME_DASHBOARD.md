@@ -107,7 +107,7 @@ graph TD
 | [[icp_consciousness_ladder]] | ACTIVE | 4-stage audience ladder (Astrology Seeker → Agency → Egoless Action → AI Sovereignty) |
 | [[creative_performance_system_2026-10-27]] | CURRENT | Creative IDs `static01`–`static04`, performance ledger, tested report tool; 0 runs, 0 spend; `static01/02` brand conflict flagged |
 
-**Creative assets (repo, not notes):** `static01` `/ads/hindi_navratri_v2_1080.png` (hi, 1080×1080, **brand conflict** — deity image + devotional voice retained by owner), `static02` `/ads/global_oracle_v2_1080.png` (en, 1080×1080, **brand conflict** — deity/oracle image retained; oracle/exact-chart claims removed), `static03` `/ads/campaign_v2_hindi_1x1.png` (hi, 1024×1024, brand-safe), `static04` `/ads/campaign_v2_english_1x1.png` (en, 1024×1024, brand-safe), `static05` `/ads/hindi_navratri_safe_1080.png` (hi, 1080×1080, safe-copy test — no prediction/oracle claims; deity image still **CONFLICT**). Copy revision for `static01/02` is owner-approved (2026-10-27) and recorded in [[creative_performance_system_2026-10-27]] §3. Images live on branch `feat/book-pitch-and-meeting-copy`; ledger system in `525aa9e`.
+**Creative assets (repo, not notes):** `static01` `/ads/hindi_navratri_v2_1080.png` (hi, 1080×1080, **brand conflict** — deity image + devotional voice retained by owner), `static02` `/ads/global_oracle_v2_1080.png` (en, 1080×1080, **brand conflict** — deity/oracle image retained; oracle/exact-chart claims removed), `static03` `/ads/campaign_v2_hindi_1x1.png` (hi, 1024×1024, brand-safe), `static04` `/ads/campaign_v2_english_1x1.png` (en, 1024×1024, brand-safe), `static05` `/ads/hindi_navratri_safe_v2_1080.png` (hi, 1080×1080, safe-copy test — smaller type, zoomed-out scenery, watermark removed; deity image still **CONFLICT**). Copy revision for `static01/02` is owner-approved (2026-10-27) and recorded in [[creative_performance_system_2026-10-27]] §3. Images live on branch `feat/book-pitch-and-meeting-copy`; ledger system in `525aa9e`.
 
 ### 3. [[02_Budget_Finances]]
 | File | Status | What it holds |
@@ -140,7 +140,7 @@ Repo: `C:\Users\ASUS\Desktop\doctorsofsoul` · repo status page: `docs/CURRENT-S
 |---|---|---|---|
 | `origin/main` | `802ffed` | **Deployed / live** | Bilingual site, Razorpay live, meeting booking |
 | `fix/technical-seo-and-utm` | `a0a87eb` | **Local, not pushed** | UTM-preserving redirects, sitemap, robots, canonical/hreflang, Book/Product + Service JSON-LD, removed locale `noindex` |
-| `feat/book-pitch-and-meeting-copy` | `7ce5038` | **Local, not merged** | Landing alignment, campaign v2 creatives, creative registry + ledger, `static01/02` reissued at 1080×1080, `static05` safe-copy test added |
+| `feat/book-pitch-and-meeting-copy` | `895b525` | **Local, not merged** | Landing alignment, campaign v2 creatives, creative registry + ledger, `static01/02` reissued at 1080×1080, `static05` safe-copy test revised |
 
 **Verified today on `a0a87eb`:** 55/55 frontend tests pass, `tsc` clean, production build passes, `/sitemap.xml` → `200`, `/hi` and `/en/meeting` send **no** `X-Robots-Tag`, and with `ADMIN_PATH` set the proxy returns `404` on `/admin` without the gate cookie and `307 → /admin` on `/<ADMIN_PATH>`.
 
@@ -172,5 +172,5 @@ Repo: `C:\Users\ASUS\Desktop\doctorsofsoul` · repo status page: `docs/CURRENT-S
 
 ## 🗓️ Sync log
 
-- **2026-10-27** — truth pass; prices/UTM corrected; campaign v2 prepared; SEO/UTM branch built and verified; locale `noindex` removed; every note indexed here with a status label and the progress table above; creative registry + performance ledger + tested report tool added (branch `feat/book-pitch-and-meeting-copy` `525aa9e`, 0 runs recorded); `static01/02` copy revised per owner and reissued at 1080×1080 (deity imagery retained → still CONFLICT); `static05` added as the owner's safe-copy test on the same design (copy clean, deity image still CONFLICT).
+- **2026-10-27** — truth pass; prices/UTM corrected; campaign v2 prepared; SEO/UTM branch built and verified; locale `noindex` removed; every note indexed here with a status label and the progress table above; creative registry + performance ledger + tested report tool added (branch `feat/book-pitch-and-meeting-copy` `525aa9e`, 0 runs recorded); `static01/02` copy revised per owner and reissued at 1080×1080 (deity imagery retained → still CONFLICT); `static05` added as the owner's safe-copy test and revised same day (smaller type, zoomed-out scenery, watermark removed; copy clean, deity image still CONFLICT).
 - **2026-10-26** — budget/bridge strategy decisions; SEO audit; decision memo (now marked UNVERIFIED).

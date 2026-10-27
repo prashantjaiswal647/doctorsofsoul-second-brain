@@ -1,7 +1,7 @@
 # Creative Registry & Performance Ledger (2026-10-27)
 
 **Status:** CURRENT — system बना और test हुआ, पर **data शून्य है**: 0 runs, 0 spend, 0 orders.
-**Repo branch:** `feat/book-pitch-and-meeting-copy` · commits `525aa9e` (ledger system), `0e82b58` (static01/02 copy revision, 1080×1080), `7ce5038` (static05 safe-copy test)
+**Repo branch:** `feat/book-pitch-and-meeting-copy` · commits `525aa9e` (ledger system), `0e82b58` (static01/02 copy revision, 1080×1080), `7ce5038` + `895b525` (static05 safe-copy test and revision)
 **Files:** `marketing/creative-registry.csv`, `marketing/creative-performance.csv`, `marketing/CREATIVE-LEDGER-HI.md`, `deploy/devtools/creative_report.py`, `backend/tests/test_creative_ledger.py`.
 
 Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[campaign_v2_plan_2026-10-27]], [[2026-10-27_truth_pass]], [[ad_spend_logs.csv]].
@@ -27,7 +27,7 @@ Verified: 8/8 tests pass, tool खाली ledger पर exit 0 के सा�
 | 2 | `static02` | `/ads/global_oracle_v2_1080.png` (1080×1080) | en | "Your Chart Is a Map. Not a Verdict." | NOT_RUN | **CONFLICT** — देवी/ऑरेकल चित्र |
 | 3 | `static03` | `/ads/campaign_v2_hindi_1x1.png` (1024×1024) | hi | कुंडली मौसम, नाव आपकी | PREPARED | PASS |
 | 4 | `static04` | `/ads/campaign_v2_english_1x1.png` (1024×1024) | en | "Stop Guessing" (brand-safe) | PREPARED | PASS |
-| 5 | `static05` | `/ads/hindi_navratri_safe_1080.png` (1080×1080) | hi | "नवरात्रि गई, पर मैं नहीं" — safe-copy test | NOT_RUN | **CONFLICT** — सिर्फ़ देवी चित्र; कॉपी safe |
+| 5 | `static05` | `/ads/hindi_navratri_safe_v2_1080.png` (1080×1080) | hi | "नवरात्रि गई, पर मैं नहीं" — safe-copy test | NOT_RUN | **CONFLICT** — सिर्फ़ देवी चित्र; कॉपी safe |
 
 Owner ने जो दो images भेजीं वे static01/static02 की ही copies थीं (MD5 match), नए assets नहीं।
 
@@ -48,12 +48,14 @@ Owner ने graphics वही रखने और सिर्फ़ content �
 Owner ने यह test copy दी, वही design language और ₹9 offer:
 
 > नवरात्रि गई,
-> पर मैं नहीं,
+> पर मैं नहीं
 >
 > सबको पढ़ाना है,
 > सबको बढ़ाना है
 
-CTA: **किताब पढ़ें — ₹9** · `/ads/hindi_navratri_safe_1080.png`
+CTA: **किताब पढ़ें** (₹9 ऊपर अलग) · `/ads/hindi_navratri_safe_v2_1080.png`
+
+**v2 revision (2026-10-27, owner):** type ~10% छोटा, scenery थोड़ा zoom-out, Gemini watermark हटाया, CTA से ₹9 निकाला; पुरानी v1 history के लिए रखी है।
 
 **कॉपी safe:** कोई prediction, oracle, exact-chart या "मैं पढ़ाऊँगी" दावा नहीं। **लेकिन** देवी आकृति अभी भी चित्र में है, इसलिए `brand_check = CONFLICT` (सिर्फ़ imagery)। static01 से अलग ID इसलिए रखा है कि एक ही graphics पर दो कॉपी की performance अलग-अलग मापी जा सके।
 
