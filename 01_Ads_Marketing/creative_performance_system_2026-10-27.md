@@ -1,7 +1,7 @@
 # Creative Registry & Performance Ledger (2026-10-27)
 
 **Status:** CURRENT — system बना और test हुआ, पर **data शून्य है**: 0 runs, 0 spend, 0 orders.
-**Repo branch:** `feat/book-pitch-and-meeting-copy` · commits `525aa9e` (ledger system), `0e82b58` (static01/02 copy revision, 1080×1080), `7ce5038` + `895b525` (static05 safe-copy test and revision), `c5661a7` (owner final Hindi creative; static01 archived)
+**Repo branch:** `feat/book-pitch-and-meeting-copy` · commits `525aa9e` (ledger system), `0e82b58` (static01/02 copy revision, 1080×1080), `7ce5038` + `895b525` (static05 safe-copy test and revision), `c5661a7` (owner final Hindi creative; static01 archived), `2e1e458` (static02 archived — approved file removed)
 **Files:** `marketing/creative-registry.csv`, `marketing/creative-performance.csv`, `marketing/CREATIVE-LEDGER-HI.md`, `deploy/devtools/creative_report.py`, `backend/tests/test_creative_ledger.py`.
 
 Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[campaign_v2_plan_2026-10-27]], [[2026-10-27_truth_pass]], [[ad_spend_logs.csv]].
@@ -24,7 +24,7 @@ Verified: 8/8 tests pass, tool खाली ledger पर exit 0 के सा�
 | # | ID | File | Language | Angle | Status | Brand |
 |---|---|---|---|---|---|---|
 | 1 | `static01` | — (owner ने 2026-10-27 को हटाया) | hi | नवरात्रि वापसी, देवी का first-person संवाद | ARCHIVED | **CONFLICT** — देवी चित्र + devotional voice; अब static05 final से बदला |
-| 2 | `static02` | `/ads/global_oracle_v2_1080.png` (1080×1080) | en | "Your Chart Is a Map. Not a Verdict." | NOT_RUN | **CONFLICT** — देवी/ऑरेकल चित्र |
+| 2 | `static02` | — (approved 1080 owner ने हटाया; 800px original में पुरानी risky कॉपी) | en | "Your Chart Is a Map. Not a Verdict." | ARCHIVED | **CONFLICT** — देवी/ऑरेकल चित्र; reissue चाहिए |
 | 3 | `static03` | `/ads/campaign_v2_hindi_1x1.png` (1024×1024) | hi | कुंडली मौसम, नाव आपकी | PREPARED | PASS |
 | 4 | `static04` | `/ads/campaign_v2_english_1x1.png` (1024×1024) | en | "Stop Guessing" (brand-safe) | PREPARED | PASS |
 | 5 | `static05` | `/ads/hindi_navratri_final_1080.png` (1080×1080; owner source 800×800) | hi | "नवरात्रि गई, पर मैं नहीं" — safe-copy test | NOT_RUN | **CONFLICT** — सिर्फ़ देवी चित्र + श्री यंत्र; कॉपी safe |
@@ -82,8 +82,8 @@ Click → order mapping पहले से है: UTM/click-ID checkout पर
 | Bucket | Creative A (PASS) | Creative B (CONFLICT) | शर्त |
 |---|---|---|---|
 | `IN_HI_META` · `IN_HI_GOOGLE` | `static03` | `static05` (owner final) | static03 आज चल सकता है; static05 के लिए लिखित brand override |
-| `GLOBAL_EN_META` · `GLOBAL_EN_GOOGLE` | `static04` | `static02` | static04 आज चल सकता है; static02 के लिए वही override |
+| `GLOBAL_EN_META` · `GLOBAL_EN_GOOGLE` | `static04` | `static02` (approved file हट चुका — पहले reissue) | static04 आज चल सकता है; static02 के लिए reissue + override |
 
 नियम: एक bucket = एक currency (hi = INR, en = USD) · `utm_content` = `creative_id` · 10 दिन से पहले creative न मारें · ₹100/bucket बिना sale पर Audit Before Kill ([[campaign_rules]]) · `campaign_rules` की 2026-10-26–11-05 विंडो अभी खाली बीती है, इसलिए असली launch date से 10 दिन गिनें · data 10 दिन बाद एक बार में `creative-performance.csv` में, फिर report tool।
 
-**Owner से चाहिए:** (a) static05/static02 के लिए लिखित override या सिर्फ़ static03/static04 की हाँ, (b) launch date, (c) Meta/Google export + Admin → Traffic की numbers। पूरा विस्तार `marketing/CREATIVE-LEDGER-HI.md` §6 में।
+**Owner से चाहिए:** (a) `static05` के लिए लिखित override या सिर्फ़ `static03/static04` की हाँ, (b) `static02` का approved 1080 Git (`895b525`) से वापस लाना है या नहीं, (c) launch date, (d) Meta/Google export + Admin → Traffic की numbers। पूरा विस्तार `marketing/CREATIVE-LEDGER-HI.md` §6 में।
