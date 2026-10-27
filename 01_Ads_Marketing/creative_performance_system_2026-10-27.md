@@ -1,7 +1,7 @@
 # Creative Registry & Performance Ledger (2026-10-27)
 
 **Status:** CURRENT — system बना और test हुआ, पर **data शून्य है**: 0 runs, 0 spend, 0 orders.
-**Repo branch:** `feat/book-pitch-and-meeting-copy` · commit `525aa9e`
+**Repo branch:** `feat/book-pitch-and-meeting-copy` · commits `525aa9e` (ledger system) + `0e82b58` (static01/02 copy revision, 1080×1080)
 **Files:** `marketing/creative-registry.csv`, `marketing/creative-performance.csv`, `marketing/CREATIVE-LEDGER-HI.md`, `deploy/devtools/creative_report.py`, `backend/tests/test_creative_ledger.py`.
 
 Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[campaign_v2_plan_2026-10-27]], [[2026-10-27_truth_pass]], [[ad_spend_logs.csv]].
@@ -21,19 +21,26 @@ Verified: 8/8 tests pass, tool खाली ledger पर exit 0 के सा�
 
 ## 2. Creative numbering (4 creatives)
 
-| # | ID | Language | Angle | Status | Brand |
-|---|---|---|---|---|---|
-| 1 | `static01` | hi | नवरात्रि वापसी, देवी का संवाद | NOT_RUN | **CONFLICT** — देवी चित्र |
-| 2 | `static02` | en | "Vedic Oracle / exact chart" | NOT_RUN | **CONFLICT** — deity/oracle + personalised claim |
-| 3 | `static03` | hi | कुंडली मौसम, नाव आपकी | PREPARED | PASS |
-| 4 | `static04` | en | "Stop Guessing" (brand-safe) | PREPARED | PASS |
+| # | ID | File | Language | Angle | Status | Brand |
+|---|---|---|---|---|---|---|
+| 1 | `static01` | `/ads/hindi_navratri_v2_1080.png` (1080×1080) | hi | नवरात्रि वापसी, देवी का first-person संवाद | NOT_RUN | **CONFLICT** — देवी चित्र + devotional voice |
+| 2 | `static02` | `/ads/global_oracle_v2_1080.png` (1080×1080) | en | "Your Chart Is a Map. Not a Verdict." | NOT_RUN | **CONFLICT** — देवी/ऑरेकल चित्र |
+| 3 | `static03` | `/ads/campaign_v2_hindi_1x1.png` (1024×1024) | hi | कुंडली मौसम, नाव आपकी | PREPARED | PASS |
+| 4 | `static04` | `/ads/campaign_v2_english_1x1.png` (1024×1024) | en | "Stop Guessing" (brand-safe) | PREPARED | PASS |
 
-Owner ने जो दो images भेजीं वे static01/static02 की ही copies हैं (MD5 match), नए assets नहीं।
+Owner ने जो दो images भेजीं वे static01/static02 की ही copies थीं (MD5 match), नए assets नहीं।
 
-## 3. खुला owner decision — brand conflict
+## 3. Copy संशोधन — owner decision (2026-10-27)
 
-`soul` और campaign rules: कोई देवी/ऑरेकल चित्र नहीं, कोई prediction promise नहीं। static01/static02 दोनों इसके विरुद्ध हैं; [[campaign_v2_plan_2026-10-27]] ने इसी कारण static03/static04 बनाए थे। दोनों 800×800 भी हैं (Meta feed recommendation 1080×1080)।
-**विकल्प:** (a) static03/static04 चलाएँ, या (b) owner लिखित में brand rule override करे और फिर 1080×1080 पर resize कराए। Agent ने कुछ चलाया नहीं, हटाया नहीं — सिर्फ़ दर्ज किया।
+Owner ने graphics वही रखने और सिर्फ़ content बदलने को कहा; copy owner-approved है:
+
+| ID | पुरानी कॉपी (जोखिम) | नई कॉपी (लागू) | क्या हटा |
+|---|---|---|---|
+| static01 | "Stop Guessing Your Destiny / Vedic Oracle" जैसा service framing | "नवरात्रि खत्म हो गई, / और मैं रुक गई। / स्वयं सबको पढ़ाने के लिए।" + CTA "किताब पढ़ें — ₹9" | oracle service framing, अंग्रेज़ी headline, छिपा CTA |
+| static02 | "Your Personal Vedic Oracle", "tailored to your exact chart" | "Stop Guessing Your Destiny. / Your Chart Is a Map. Not a Verdict. / Astrology shows the weather. You still sail the boat." + CTA "Read the Book — $9" | personalised divination दावा, exact-chart promise, छिपा CTA |
+
+**जो जोखिम बचा है (owner को पता है):** दोनों creatives में देवी/ऑरेकल चित्र अभी भी है और Hindi line first-person devotional voice में है — `soul` का "no deity or oracle imagery" नियम अभी टूटता है। इसलिए `brand_check = CONFLICT` ही रहेगा।
+**विकल्प:** (a) [[campaign_v2_plan_2026-10-27]] के static03/static04 चलाएँ (PASS), या (b) owner लिखित में brand rule override करे। 1080×1080 resize हो चुका है। Agent ने कुछ चलाया नहीं, हटाया नहीं — सिर्फ़ दर्ज किया।
 
 ## 4. Performance sheet भरने का तरीका
 
@@ -53,6 +60,6 @@ Click → order mapping पहले से है: UTM/click-ID checkout पर
 
 ## 7. अगला कदम
 
-1. static01/static02 पर owner का फैसला।
-2. जो creatives चलें, उन्हें 1080×1080 में resize करना।
-3. पहला run शुरू होते ही ledger में row; तब पहली बार असली ROAS/CAC बोला जा सकेगा।
+1. static01/static02 पर सिर्फ़ एक फैसला बचा है: brand rule का लिखित override, या static03/static04 चलाना (दोनों PASS)।
+2. 1080×1080 resize हो चुका — static01/static02 की नई files repo में हैं।
+3. पहला run शुरू होते ही `creative-performance.csv` में row; तब पहली बार असली ROAS/CAC बोला जा सकेगा।
