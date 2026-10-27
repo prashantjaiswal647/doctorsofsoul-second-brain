@@ -1,1 +1,1 @@
-date,campaign_name,angle,spend_inr,clicks,cpc_inr,bookings,revenue_inr,roas
+date,bucket_id,geo,locale,platform,landing_url,spend_inr,clicks,avg_time_sec,book_clicks,bookings,revenue_inr
