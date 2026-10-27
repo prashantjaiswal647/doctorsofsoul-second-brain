@@ -21,7 +21,7 @@
 | 4 | Tracking & attribution | **60%** | GA4 `G-695DZ3HPT1` on; UTM convention documented; legacy and wrong-language redirects now preserve `utm_*`/`fbclid`/`gclid` | **Meta Pixel is off**; no conversion-verification evidence; no server-side events |
 | 5 | Technical SEO | **75%** | Sitemap, robots, canonical, hreflang, Book/Product + Service JSON-LD shipped on branch and verified; wrong locale `noindex` removed | Not deployed; FAQPage schema, `og:type`, `llms.txt`/`ai-catalog.json`, `alt`, depth, internal links |
 | 6 | Ad campaign readiness | **35%** | v2 plan + 2 creatives + corrected UTMs **prepared**; zero campaigns, zero spend | Budget decision (₹100 vs ₹400/day) open; Adspirer quota 15/15 until 2026-11-19; pixel off |
-| 7 | Creative assets | **60%** | 4 static 1:1 creatives (`static01`–`static04`) catalogued with IDs and `utm_content`; `static01/02` now 1080×1080 with owner-approved copy, `static03/04` brand-safe | No video; `static01/02` still carry deity imagery (brand CONFLICT); no tested winner or A/B data |
+| 7 | Creative assets | **62%** | 5 static 1:1 creatives (`static01`–`static05`) catalogued with IDs and `utm_content`; `static01/02/05` at 1080×1080 with owner-approved copy, `static03/04` brand-safe | No video; `static01/02/05` still carry deity imagery (brand CONFLICT); no tested winner or A/B data |
 | 8 | Measurement & ledger | **45%** | Creative registry + performance ledger + tested report tool (8 tests); spend log schema ready | Ledger has **0 runs / 0 spend / 0 orders** — no verified CAC/ROAS yet |
 | 9 | Code quality & tests | **80%** | Frontend 55/55 + `tsc` + build; backend 686 tests collect | Full backend suite not completed locally — CI is the proof, not a local claim |
 | 10 | Documentation & second brain | **85%** | Truth pass current; all 17 notes indexed here; SEO audit annotated | [[soul]] and [[funnel_architecture]] still describe the old lead order; budget conflict unresolved |
@@ -107,7 +107,7 @@ graph TD
 | [[icp_consciousness_ladder]] | ACTIVE | 4-stage audience ladder (Astrology Seeker → Agency → Egoless Action → AI Sovereignty) |
 | [[creative_performance_system_2026-10-27]] | CURRENT | Creative IDs `static01`–`static04`, performance ledger, tested report tool; 0 runs, 0 spend; `static01/02` brand conflict flagged |
 
-**Creative assets (repo, not notes):** `static01` `/ads/hindi_navratri_v2_1080.png` (hi, 1080×1080, **brand conflict** — deity image + devotional voice retained by owner), `static02` `/ads/global_oracle_v2_1080.png` (en, 1080×1080, **brand conflict** — deity/oracle image retained; oracle/exact-chart claims removed), `static03` `/ads/campaign_v2_hindi_1x1.png` (hi, 1024×1024, brand-safe), `static04` `/ads/campaign_v2_english_1x1.png` (en, 1024×1024, brand-safe). Copy revision for `static01/02` is owner-approved (2026-10-27) and recorded in [[creative_performance_system_2026-10-27]] §3. Images live on branch `feat/book-pitch-and-meeting-copy`; ledger system in `525aa9e`.
+**Creative assets (repo, not notes):** `static01` `/ads/hindi_navratri_v2_1080.png` (hi, 1080×1080, **brand conflict** — deity image + devotional voice retained by owner), `static02` `/ads/global_oracle_v2_1080.png` (en, 1080×1080, **brand conflict** — deity/oracle image retained; oracle/exact-chart claims removed), `static03` `/ads/campaign_v2_hindi_1x1.png` (hi, 1024×1024, brand-safe), `static04` `/ads/campaign_v2_english_1x1.png` (en, 1024×1024, brand-safe), `static05` `/ads/hindi_navratri_safe_1080.png` (hi, 1080×1080, safe-copy test — no prediction/oracle claims; deity image still **CONFLICT**). Copy revision for `static01/02` is owner-approved (2026-10-27) and recorded in [[creative_performance_system_2026-10-27]] §3. Images live on branch `feat/book-pitch-and-meeting-copy`; ledger system in `525aa9e`.
 
 ### 3. [[02_Budget_Finances]]
 | File | Status | What it holds |
@@ -140,7 +140,7 @@ Repo: `C:\Users\ASUS\Desktop\doctorsofsoul` · repo status page: `docs/CURRENT-S
 |---|---|---|---|
 | `origin/main` | `802ffed` | **Deployed / live** | Bilingual site, Razorpay live, meeting booking |
 | `fix/technical-seo-and-utm` | `a0a87eb` | **Local, not pushed** | UTM-preserving redirects, sitemap, robots, canonical/hreflang, Book/Product + Service JSON-LD, removed locale `noindex` |
-| `feat/book-pitch-and-meeting-copy` | `0e82b58` | **Local, not merged** | Landing alignment, campaign v2 creatives, creative registry + ledger, `static01/02` reissued at 1080×1080 with approved copy |
+| `feat/book-pitch-and-meeting-copy` | `7ce5038` | **Local, not merged** | Landing alignment, campaign v2 creatives, creative registry + ledger, `static01/02` reissued at 1080×1080, `static05` safe-copy test added |
 
 **Verified today on `a0a87eb`:** 55/55 frontend tests pass, `tsc` clean, production build passes, `/sitemap.xml` → `200`, `/hi` and `/en/meeting` send **no** `X-Robots-Tag`, and with `ADMIN_PATH` set the proxy returns `404` on `/admin` without the gate cookie and `307 → /admin` on `/<ADMIN_PATH>`.
 
@@ -166,11 +166,11 @@ Repo: `C:\Users\ASUS\Desktop\doctorsofsoul` · repo status page: `docs/CURRENT-S
 4. Meta review → `META_TRACKING_ENABLED`.
 5. Any real campaign creation or spend (blocked by 1 and 4; Adspirer resets 2026-11-19).
 6. Close stale PR #59 (superseded by PR #61).
-7. `static01`/`static02`: copy is fixed and both are 1080×1080, but deity imagery remains — brand-rule override in writing, or run `static03`/`static04`?
+7. `static01`/`static02`/`static05`: copy is fixed and all are 1080×1080, but deity imagery remains — brand-rule override in writing, or run `static03`/`static04`?
 
 ---
 
 ## 🗓️ Sync log
 
-- **2026-10-27** — truth pass; prices/UTM corrected; campaign v2 prepared; SEO/UTM branch built and verified; locale `noindex` removed; every note indexed here with a status label and the progress table above; creative registry + performance ledger + tested report tool added (branch `feat/book-pitch-and-meeting-copy` `525aa9e`, 0 runs recorded); `static01/02` copy revised per owner and reissued at 1080×1080 (deity imagery retained → still CONFLICT).
+- **2026-10-27** — truth pass; prices/UTM corrected; campaign v2 prepared; SEO/UTM branch built and verified; locale `noindex` removed; every note indexed here with a status label and the progress table above; creative registry + performance ledger + tested report tool added (branch `feat/book-pitch-and-meeting-copy` `525aa9e`, 0 runs recorded); `static01/02` copy revised per owner and reissued at 1080×1080 (deity imagery retained → still CONFLICT); `static05` added as the owner's safe-copy test on the same design (copy clean, deity image still CONFLICT).
 - **2026-10-26** — budget/bridge strategy decisions; SEO audit; decision memo (now marked UNVERIFIED).

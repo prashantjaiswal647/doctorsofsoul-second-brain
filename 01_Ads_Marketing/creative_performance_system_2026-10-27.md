@@ -1,7 +1,7 @@
 # Creative Registry & Performance Ledger (2026-10-27)
 
 **Status:** CURRENT — system बना और test हुआ, पर **data शून्य है**: 0 runs, 0 spend, 0 orders.
-**Repo branch:** `feat/book-pitch-and-meeting-copy` · commits `525aa9e` (ledger system) + `0e82b58` (static01/02 copy revision, 1080×1080)
+**Repo branch:** `feat/book-pitch-and-meeting-copy` · commits `525aa9e` (ledger system), `0e82b58` (static01/02 copy revision, 1080×1080), `7ce5038` (static05 safe-copy test)
 **Files:** `marketing/creative-registry.csv`, `marketing/creative-performance.csv`, `marketing/CREATIVE-LEDGER-HI.md`, `deploy/devtools/creative_report.py`, `backend/tests/test_creative_ledger.py`.
 
 Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[campaign_v2_plan_2026-10-27]], [[2026-10-27_truth_pass]], [[ad_spend_logs.csv]].
@@ -19,7 +19,7 @@ Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[campaign_v2_plan_202
 
 Verified: 8/8 tests pass, tool खाली ledger पर exit 0 के साथ "No runs recorded yet" देता है। कोई संख्या नहीं बनाई गई।
 
-## 2. Creative numbering (4 creatives)
+## 2. Creative numbering (5 creatives)
 
 | # | ID | File | Language | Angle | Status | Brand |
 |---|---|---|---|---|---|---|
@@ -27,6 +27,7 @@ Verified: 8/8 tests pass, tool खाली ledger पर exit 0 के सा�
 | 2 | `static02` | `/ads/global_oracle_v2_1080.png` (1080×1080) | en | "Your Chart Is a Map. Not a Verdict." | NOT_RUN | **CONFLICT** — देवी/ऑरेकल चित्र |
 | 3 | `static03` | `/ads/campaign_v2_hindi_1x1.png` (1024×1024) | hi | कुंडली मौसम, नाव आपकी | PREPARED | PASS |
 | 4 | `static04` | `/ads/campaign_v2_english_1x1.png` (1024×1024) | en | "Stop Guessing" (brand-safe) | PREPARED | PASS |
+| 5 | `static05` | `/ads/hindi_navratri_safe_1080.png` (1080×1080) | hi | "नवरात्रि गई, पर मैं नहीं" — safe-copy test | NOT_RUN | **CONFLICT** — सिर्फ़ देवी चित्र; कॉपी safe |
 
 Owner ने जो दो images भेजीं वे static01/static02 की ही copies थीं (MD5 match), नए assets नहीं।
 
@@ -41,6 +42,20 @@ Owner ने graphics वही रखने और सिर्फ़ content �
 
 **जो जोखिम बचा है (owner को पता है):** दोनों creatives में देवी/ऑरेकल चित्र अभी भी है और Hindi line first-person devotional voice में है — `soul` का "no deity or oracle imagery" नियम अभी टूटता है। इसलिए `brand_check = CONFLICT` ही रहेगा।
 **विकल्प:** (a) [[campaign_v2_plan_2026-10-27]] के static03/static04 चलाएँ (PASS), या (b) owner लिखित में brand rule override करे। 1080×1080 resize हो चुका है। Agent ने कुछ चलाया नहीं, हटाया नहीं — सिर्फ़ दर्ज किया।
+
+### static05 — safe-copy test (2026-10-27)
+
+Owner ने यह test copy दी, वही design language और ₹9 offer:
+
+> नवरात्रि गई,
+> पर मैं नहीं,
+>
+> सबको पढ़ाना है,
+> सबको बढ़ाना है
+
+CTA: **किताब पढ़ें — ₹9** · `/ads/hindi_navratri_safe_1080.png`
+
+**कॉपी safe:** कोई prediction, oracle, exact-chart या "मैं पढ़ाऊँगी" दावा नहीं। **लेकिन** देवी आकृति अभी भी चित्र में है, इसलिए `brand_check = CONFLICT` (सिर्फ़ imagery)। static01 से अलग ID इसलिए रखा है कि एक ही graphics पर दो कॉपी की performance अलग-अलग मापी जा सके।
 
 ## 4. Performance sheet भरने का तरीका
 
@@ -60,6 +75,6 @@ Click → order mapping पहले से है: UTM/click-ID checkout पर
 
 ## 7. अगला कदम
 
-1. static01/static02 पर सिर्फ़ एक फैसला बचा है: brand rule का लिखित override, या static03/static04 चलाना (दोनों PASS)।
-2. 1080×1080 resize हो चुका — static01/static02 की नई files repo में हैं।
+1. static01/static02/static05 पर सिर्फ़ एक फैसला बचा है: brand rule का लिखित override, या static03/static04 चलाना (दोनों PASS)।
+2. 1080×1080 resize हो चुका — static01/static02/static05 की files repo में हैं।
 3. पहला run शुरू होते ही `creative-performance.csv` में row; तब पहली बार असली ROAS/CAC बोला जा सकेगा।
