@@ -179,3 +179,6 @@ Repo: `C:\Users\ASUS\Desktop\doctorsofsoul` · repo status page: not committed t
 ### 6. 00_System_Docs
 - [[DOCTORS-OF-SOUL-BRIDGE]] — repo ↔ vault bridge
 - [[SECURITY_AUDIT_REPORT]] — security audit report
+
+### 7. Ads (campaign tracking)
+- [[Ads/Reports/Campaign-Performance-Tracker]] — start-to-end campaign tracker and launch gate
