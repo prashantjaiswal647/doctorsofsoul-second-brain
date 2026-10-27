@@ -111,7 +111,7 @@ Rules either way:
 
 - Read first-party attribution in `/admin → Traffic` (source / medium / campaign / content) and purchases in `/admin`.
 - GA4 is live (`G-695DZ3HPT1`). Meta conversion data is incomplete until the pixel review is done.
-- Log every rupee in [[ad_spend_logs.csv]] the day it is spent. The ledger is the only accepted spend record.
+- Log every rupee in `marketing/creative-performance.csv` (repo) the day it is spent. The ledger is the only accepted spend record.
 - Per-creative numbers (spend, CTR, CTA clicks, orders, revenue, ROAS) go into [[creative_performance_system_2026-10-27|the creative ledger]]; the report ranks creatives inside each currency.
 - Do **not** use the numbers in [[2026-10-26_decision_memo]] — they are UNVERIFIED and no campaign ever ran.
 - After 7 days, decide with: spend, visits, checkout starts, purchases, upgrade acceptance, meeting bookings. Currency totals stay separate (₹ and $ are never added).

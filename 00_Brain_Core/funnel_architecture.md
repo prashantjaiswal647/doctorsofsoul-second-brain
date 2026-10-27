@@ -50,7 +50,7 @@ See detailed audience psychology in [[icp_consciousness_ladder]].
 ---
 
 ## 3. Key Operational Rules
-1. **Zero External Automation Dependency:** Ad execution and logging are managed locally in [[ad_spend_logs.csv]] and validated via [[validate_ledger.py]].
+1. **Zero External Automation Dependency:** Ad execution and logging are managed locally in `marketing/creative-performance.csv` (repo) and validated via [[validate_ledger.py]].
 2. **Diagnostic Evaluation at ₹100:** Governed strictly by the "Audit Before Kill" protocol defined in [[campaign_rules]].
 
 ---

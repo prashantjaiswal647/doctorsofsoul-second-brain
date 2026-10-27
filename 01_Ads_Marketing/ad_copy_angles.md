@@ -107,4 +107,4 @@ Instant digital access for online payment users.
 - Brand Soul & Tone: [[soul]]
 - Consciousness Ladder: [[icp_consciousness_ladder]]
 - Spend & CAC Rules: [[campaign_rules]]
-- Ledger: [[ad_spend_logs.csv]]
+- Ledger: `marketing/creative-performance.csv` (repo)

@@ -6,7 +6,7 @@
 
 **OWNER DECISION 2026-10-27:** Option A — ₹100/day total, Hindi Meta only, 7 days, **static03 only**. `static05` NOT in first launch. `static02` archived pending reissue. Budget conflict **RESOLVED**.
 
-Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[campaign_v2_plan_2026-10-27]], [[2026-10-27_truth_pass]], [[ad_spend_logs.csv]].
+Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[campaign_v2_plan_2026-10-27]], [[2026-10-27_truth_pass]], `marketing/creative-performance.csv` (repo).
 
 ---
 

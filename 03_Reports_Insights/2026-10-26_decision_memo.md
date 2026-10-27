@@ -2,13 +2,13 @@
 
 > **⚠️ UNVERIFIED (2026-10-27):** इस memo के आँकड़े — ₹700 spend, 24 sales, ₹29.17 CAC,
 > ₹3.54 CPC और angle-wise breakdown — किसी ad ledger, platform export या dashboard से सिद्ध नहीं हैं।
-> `02_Budget_Finances/ad_spend_logs.csv` में केवल header है, और [[active_campaign_drafts]] का
+> `marketing/creative-performance.csv` (repo) में केवल header है, और [[active_campaign_drafts]] का
 > execution log कहता है कि Adspirer quota 15/15 था, **कोई campaign बना नहीं और खर्च शून्य रहा**।
 > इन संख्याओं को किसी निर्णय का आधार न बनाएँ। असली ledger भरने के बाद ही valid मानें।
 > देखें [[2026-10-27_truth_pass]]।
 
 **Author:** System Architect & Performance Marketing Lead  
-**Cross-References:** [[HOME_DASHBOARD]], [[campaign_rules]], [[ad_copy_angles]], [[ad_spend_logs.csv]]  
+**Cross-References:** [[HOME_DASHBOARD]], [[campaign_rules]], [[ad_copy_angles]], `marketing/creative-performance.csv` (repo)  
 
 ---
 

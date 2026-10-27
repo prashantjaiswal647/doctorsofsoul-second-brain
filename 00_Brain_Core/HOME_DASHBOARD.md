@@ -59,7 +59,7 @@ graph TD
     Marketing --> V2["[[campaign_v2_plan_2026-10-27]]"]
     Marketing --> CreativeSys["[[creative_performance_system_2026-10-27]]"]
 
-    Finance --> SpendLogs["[[ad_spend_logs.csv]]"]
+    Finance --> SpendLogs["Repo ledger: marketing/creative-performance.csv"]
     Engine --> Validator["[[validate_ledger.py]]"]
 
     Reports --> Truth["[[2026-10-27_truth_pass]]"]
@@ -109,10 +109,10 @@ graph TD
 
 **Creative assets (repo, not notes):** `static01` **ARCHIVED** — owner deleted the file 2026-10-27 (recoverable from `895b525`), `static02` **ARCHIVED** — approved 1080 also deleted 2026-10-27; the surviving `/ads/global_oracle_1x1.png` (800×800) still has the old rejected copy, so it must not run, `static03` `/ads/campaign_v2_hindi_1x1.png` (hi, 1024×1024, brand-safe), `static04` `/ads/campaign_v2_english_1x1.png` (en, 1024×1024, brand-safe), `static05` `/ads/hindi_navratri_final_1080.png` (hi, owner's final artwork: 800×800 source at `/ads/hindi_navratri_final_1x1.png` + 1080 delivery upscale; safe copy, deity + Sri Yantra still **CONFLICT**). Four-creative plan in [[creative_performance_system_2026-10-27]] §7 and `marketing/CREATIVE-LEDGER-HI.md` §6. Images live on branch `feat/book-pitch-and-meeting-copy`; latest creative commit `c5661a7`.
 
-### 3. 02_Budget_Finances
+### 3. 02_Budget_Finances (folder now empty: the ledger lives in the repo, owner decision 2026-10-27 Option A)
 | File | Status | What it holds |
 |---|---|---|
-| [[ad_spend_logs.csv]] | EMPTY | Header row only — **no spend recorded**. It now carries `creative_id`, so spend can be tied to the registry. Any CAC/ROAS claim without this file is [[2026-10-26_decision_memo|unverified]] |
+| `marketing/creative-performance.csv` (repo) | EMPTY | Header row only — **no spend recorded**. It now carries `creative_id`, so spend can be tied to the registry. Any CAC/ROAS claim without this file is [[2026-10-26_decision_memo|unverified]] |
 
 ### 4. 03_Reports_Insights
 | Note | Status | What it holds |
@@ -125,7 +125,7 @@ graph TD
 ### 5. 06_Engine_Local
 | File | Status | What it holds |
 |---|---|---|
-| [[validate_ledger.py]] | ACTIVE TOOL | Zero-dependency ledger validator; nothing to validate while the ledger is empty |
+| [[validate_ledger.py]] | ACTIVE TOOL | Thin wrapper that runs the repo's tested `deploy/devtools/creative_report.py` on the repo ledger; run it with the repo's Python (`backend/.venv`). Nothing to validate while the ledger is empty |
 
 ### 6. `DOC Brain/`
 Empty folder. Either give it a purpose (drop zone for source PDFs/transcripts) or remove it — owner decision.
@@ -151,7 +151,7 @@ Repo: `C:\Users\ASUS\Desktop\doctorsofsoul` · repo status page: not committed t
 ## 🔒 Standing rules (do not drift)
 
 - No merge, push to `main`, deploy, payment/refund action, DNS/firewall change, secret change or public sales-flag change without the owner's explicit approval.
-- Ads are **owner-only**: prepare campaigns, never create or activate them; record every rupee in [[ad_spend_logs.csv]].
+- Ads are **owner-only**: prepare campaigns, never create or activate them; record every rupee in `marketing/creative-performance.csv` (repo).
 - Prices and fees are not final: ₹9 / ₹99 / ₹199, $9 / $17, meeting ₹999 / $53 — never change without approval.
 - Brand: no fake reviews or ratings, no deity or oracle imagery, no medical or cure claims, avoid the word "healing".
 - One task = one branch = one PR; application fixes start with a failing regression test.
