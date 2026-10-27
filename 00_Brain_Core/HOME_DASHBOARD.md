@@ -21,14 +21,14 @@
 | 4 | Tracking & attribution | **60%** | GA4 `G-695DZ3HPT1` on; UTM convention documented; legacy and wrong-language redirects now preserve `utm_*`/`fbclid`/`gclid` | **Meta Pixel is off**; no conversion-verification evidence; no server-side events |
 | 5 | Technical SEO | **75%** | Sitemap, robots, canonical, hreflang, Book/Product + Service JSON-LD shipped on branch and verified; wrong locale `noindex` removed | Not deployed; FAQPage schema, `og:type`, `llms.txt`/`ai-catalog.json`, `alt`, depth, internal links |
 | 6 | Ad campaign readiness | **35%** | v2 plan + 2 creatives + corrected UTMs **prepared**; zero campaigns, zero spend | Budget decision (₹100 vs ₹400/day) open; Adspirer quota 15/15 until 2026-11-19; pixel off |
-| 7 | Creative assets | **55%** | 4 static 1:1 creatives on disk (2 new v2 + 2 older); brand-safe, no deity/oracle imagery | Only static 1:1; no video, no tested winner, no A/B data |
-| 8 | Measurement & ledger | **30%** | `validate_ledger.py` exists; ledger schema ready | Ledger is header-only, no platform export, no verified CAC/ROAS |
+| 7 | Creative assets | **55%** | 4 static 1:1 creatives (`static01`–`static04`) catalogued with IDs and `utm_content`; `static03/04` brand-safe, `static01/02` documented conflicts | No video; 800×800 assets below the 1080 recommendation; no tested winner or A/B data |
+| 8 | Measurement & ledger | **45%** | Creative registry + performance ledger + tested report tool (8 tests); spend log schema ready | Ledger has **0 runs / 0 spend / 0 orders** — no verified CAC/ROAS yet |
 | 9 | Code quality & tests | **80%** | Frontend 55/55 + `tsc` + build; backend 686 tests collect | Full backend suite not completed locally — CI is the proof, not a local claim |
 | 10 | Documentation & second brain | **85%** | Truth pass current; all 17 notes indexed here; SEO audit annotated | [[soul]] and [[funnel_architecture]] still describe the old lead order; budget conflict unresolved |
 
-**Overall: ≈65% of paid-funnel launch readiness.** The site is already live and selling — the missing 35% is mostly about spending money without guessing: proven tracking, a resolved budget, a proven webhook, and a deployed SEO branch.
+**Overall: ≈66% of paid-funnel launch readiness.** The site is already live and selling — the missing third is mostly about spending money without guessing: proven tracking, a resolved budget, a proven webhook, a brand decision on `static01/02`, and a deployed SEO branch.
 
-**Estimated movement today (2026-10-27):** technical SEO +30–35, documentation +20–25, tracking +10 (attribution preservation), campaign readiness +15 (v2 prepared), creative +10 (v2 pair), measurement +10 (validator checked against empty ledger).
+**Estimated movement today (2026-10-27):** technical SEO +30–35, documentation +20–25, tracking +10 (attribution preservation), campaign readiness +15 (v2 prepared), creative +10 (v2 pair), measurement +25 (creative ledger + tested report tool).
 
 ---
 
@@ -57,6 +57,7 @@ graph TD
     Marketing --> Angles["[[ad_copy_angles]]"]
     Marketing --> Hooks["[[winning_hooks]]"]
     Marketing --> V2["[[campaign_v2_plan_2026-10-27]]"]
+    Marketing --> CreativeSys["[[creative_performance_system_2026-10-27]]"]
 
     Finance --> SpendLogs["[[ad_spend_logs.csv]]"]
     Engine --> Validator["[[validate_ledger.py]]"]
@@ -104,13 +105,14 @@ graph TD
 | [[ad_copy_angles]] | ACTIVE | Static image-text swipe file, ₹9 offer |
 | [[cross_platform_creative_brief]] | ACTIVE — conflict flagged | Meta + Google creative blueprint; says ₹100/day lean test |
 | [[icp_consciousness_ladder]] | ACTIVE | 4-stage audience ladder (Astrology Seeker → Agency → Egoless Action → AI Sovereignty) |
+| [[creative_performance_system_2026-10-27]] | CURRENT | Creative IDs `static01`–`static04`, performance ledger, tested report tool; 0 runs, 0 spend; `static01/02` brand conflict flagged |
 
-**Creative assets (repo, not notes):** `frontend/public/ads/campaign_v2_hindi_1x1.png` and `campaign_v2_english_1x1.png` (commit `d0b499c`), plus `hindi_navratri_1x1.png` and `global_oracle_1x1.png` (`1a5c56b`).
+**Creative assets (repo, not notes):** `static01` `/ads/hindi_navratri_1x1.png` (hi, 800×800, **brand conflict**), `static02` `/ads/global_oracle_1x1.png` (en, 800×800, **brand conflict**), `static03` `/ads/campaign_v2_hindi_1x1.png` (hi, 1024×1024, brand-safe), `static04` `/ads/campaign_v2_english_1x1.png` (en, 1024×1024, brand-safe). Images live on branch `feat/book-pitch-and-meeting-copy` (commit `d0b499c`); ledger system in `525aa9e`.
 
 ### 3. [[02_Budget_Finances]]
 | File | Status | What it holds |
 |---|---|---|
-| [[ad_spend_logs.csv]] | EMPTY | Header row only — **no spend recorded**. Any CAC/ROAS claim without this file is [[2026-10-26_decision_memo|unverified]] |
+| [[ad_spend_logs.csv]] | EMPTY | Header row only — **no spend recorded**. It now carries `creative_id`, so spend can be tied to the registry. Any CAC/ROAS claim without this file is [[2026-10-26_decision_memo|unverified]] |
 
 ### 4. [[03_Reports_Insights]]
 | Note | Status | What it holds |
@@ -164,10 +166,11 @@ Repo: `C:\Users\ASUS\Desktop\doctorsofsoul` · repo status page: `docs/CURRENT-S
 4. Meta review → `META_TRACKING_ENABLED`.
 5. Any real campaign creation or spend (blocked by 1 and 4; Adspirer resets 2026-11-19).
 6. Close stale PR #59 (superseded by PR #61).
+7. `static01`/`static02`: brand-rule override in writing, or run `static03`/`static04`? Either way, resize to 1080×1080 before launch.
 
 ---
 
 ## 🗓️ Sync log
 
-- **2026-10-27** — truth pass; prices/UTM corrected; campaign v2 prepared; SEO/UTM branch built and verified; locale `noindex` removed; every note indexed here with a status label and the progress table above.
+- **2026-10-27** — truth pass; prices/UTM corrected; campaign v2 prepared; SEO/UTM branch built and verified; locale `noindex` removed; every note indexed here with a status label and the progress table above; creative registry + performance ledger + tested report tool added (branch `feat/book-pitch-and-meeting-copy` `525aa9e`, 0 runs recorded).
 - **2026-10-26** — budget/bridge strategy decisions; SEO audit; decision memo (now marked UNVERIFIED).
