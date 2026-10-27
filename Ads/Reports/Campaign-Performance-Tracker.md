@@ -35,6 +35,7 @@ Leads: [[Ads/Reports/Leads-and-Retargeting]]
 Payments: [[Ads/Reports/Payments-and-Revenue]]
 Experiments: [[Ads/Experiments/Experiment-Log]]
 Decisions: [[Ads/Decisions/Decision-Log]]
+Repo sync: [[Ads/Reports/Repo-Sync]]
 
 Also see: [[campaign_v2_plan_2026-10-27]] · [[campaign_rules]] · [[2026-10-27_truth_pass]] · [[HOME_DASHBOARD]]
 
