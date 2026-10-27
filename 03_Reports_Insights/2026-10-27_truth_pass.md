@@ -29,8 +29,8 @@ Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[active_campaign_draf
 
 - `origin/main` = `802ffed` (2026-10-26).
 - Ad creatives branch `feat/book-pitch-and-meeting-copy`, commit `1a5c56b`: `hindi_navratri_1x1.png`, `global_oracle_1x1.png`; **not in main**.
-- SEO/UTM branch `fix/technical-seo-and-utm`, commit `055e58b` (local, not pushed): preserves `utm_*`/`fbclid`/`gclid` through book redirects, adds sitemap/robots/canonical/hreflang/JSON-LD.
-- Frontend: 54/54 tests pass, `tsc` clean, production build passes.
+- SEO/UTM branch `fix/technical-seo-and-utm`, head `a0a87eb` (local, not pushed): preserves `utm_*`/`fbclid`/`gclid` through book redirects, adds sitemap/robots/canonical/hreflang/JSON-LD, and removes the proxy's site-wide `noindex` on `/hi` and `/en`.
+- Frontend: 55/55 tests pass, `tsc` clean, production build passes.
 - Backend: 686 tests collect; representative subset 144 passed + 1 xfailed. Full local suite did not finish on Windows — CI is the proof, not a green claim.
 
 ## 4. Unverified or contradicted claims
@@ -48,7 +48,11 @@ Cross-references: [[HOME_DASHBOARD]], [[campaign_rules]], [[active_campaign_draf
 - Added the UNVERIFIED banner to [[2026-10-26_decision_memo]].
 - Fixed ₹1,000 → ₹999 in [[campaign_rules]].
 - Prepared [[campaign_v2_plan_2026-10-27]]: 2 brand-aligned creatives, corrected UTMs, paused-only launch rules. **No campaign created, no ad spend.**
+- Removed the proxy's `X-Robots-Tag: noindex, nofollow` on all `/hi` and `/en` routes (it would have de-indexed both canonical landings); regression test added first. Verified locally with the proxy active: `/admin` → `404` without the gate cookie, `/<ADMIN_PATH>` → `307 /admin`, `/hi` and `/en/meeting` send no robots header, `/sitemap.xml` → `200`.
+- Annotated [[SEO_Audit_Report]] with what is fixed vs open and corrected its wrong "noindex is good practice" advice.
 - No merge, deploy, payment change, DNS change or production flag change was made.
+
+**Deploy check:** production must set `SITE_URL=https://doctorsofsoul.co.in`; otherwise canonical and sitemap URLs emit `http://localhost:3000`.
 
 ## 6. Open owner decisions
 
