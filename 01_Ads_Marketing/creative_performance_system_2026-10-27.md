@@ -77,15 +77,14 @@ Click → order mapping पहले से है: UTM/click-ID checkout पर
 
 हर सोमवार: platform export + Admin Traffic भरें → report चलाएँ → एक ही currency में ROAS/CAC तुलना → 10-दिन से पहले creative न मारें ([[campaign_rules]]) → decision की वजह note में लिखें।
 
-## 7. अगला campaign — इन 4 creatives का plan (2026-10-27)
+## 7. चालू launch plan — Option A (owner decision 2026-10-27)
 
-**कोई campaign अभी नहीं चल रहा:** 0 runs, 0 spend, 0 orders। Meta/Google का data agent के पास नहीं आता (Adspirer quota 15/15, reset 2026-11-19; Meta Pixel बंद); ads चालू करना, budget बदलना और payment owner-only है।
+**Owner का फैसला:** ₹100/din कुल, सिर्फ़ Hindi Meta, **7 दिन**, **केवल `static03`** ([Campaign-Strategy](../Ads/Strategy/Campaign-Strategy.md), [Decision-Log](../Ads/Decisions/Decision-Log.md))। Ads Manager शीट repo में `docs/META-LAUNCH-SHEET-HI.md`।
 
-| Bucket | Creative A (PASS) | Creative B (CONFLICT) | शर्त |
-|---|---|---|---|
-| `IN_HI_META` · `IN_HI_GOOGLE` | `static03` | `static05` (owner final) | static03 आज चल सकता है; static05 के लिए लिखित brand override |
-| `GLOBAL_EN_META` · `GLOBAL_EN_GOOGLE` | `static04` | `static02` (approved file हट चुका — पहले reissue) | static04 आज चल सकता है; static02 के लिए reissue + override |
+**स्थिति:** campaign **नहीं बना** (Ads Manager खाली), Tracking QA **0/7 pending**, Pixel/CAPI **बंद**, ledger **0 runs**। यानी काग़ज़ तैयार, launch-ready नहीं।
 
-नियम: एक bucket = एक currency (hi = INR, en = USD) · `utm_content` = `creative_id` · 10 दिन से पहले creative न मारें · ₹100/bucket बिना sale पर Audit Before Kill ([[campaign_rules]]) · `campaign_rules` की 2026-10-26–11-05 विंडो अभी खाली बीती है, इसलिए असली launch date से 10 दिन गिनें · data 10 दिन बाद एक बार में `creative-performance.csv` में, फिर report tool।
+**क्यों static03:** अकेला Hindi creative जो brand check PASS है। `static05`/`static02` में देवी/ऑरैकल चित्र (CONFLICT); `static01`/`static02` की files अब repo में नहीं।
 
-**Owner से चाहिए:** (a) `static05` के लिए लिखित override या सिर्फ़ `static03/static04` की हाँ, (b) `static02` का approved 1080 Git (`895b525`) से वापस लाना है या नहीं, (c) launch date, (d) Meta/Google export + Admin → Traffic की numbers। पूरा विस्तार `marketing/CREATIVE-LEDGER-HI.md` §6 में।
+**7 दिन के नियम:** budget/audience/copy/creative/destination न बदलें · हर din का असली spend `creative-performance.csv` में · 7 दिन बाद एक row per run + report tool · ₹100 कुल खर्च पर zero sale हो तो भी तुरंत बंद न करें ([[campaign_rules]] Audit Before Kill)।
+
+**Pilot के बाद (अभी नहीं):** English Meta `static04`, Google, `static02` reissue, `static05` override — तब 4-बकेट matrix (₹400/din) या संशोधन। `utm_content` हमेशा `creative_id` (static03), file नाम नहीं।

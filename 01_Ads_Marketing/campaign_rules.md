@@ -5,6 +5,8 @@
 **Primary Conversion Asset:** *"एस्ट्रोलॉजर ऑफ़ सोल"* (`https://doctorsofsoul.co.in/hi/books/kundli-se-aatma-tak`)  
 **Cross-References:** [[HOME_DASHBOARD]], [[icp_consciousness_ladder]], [[active_campaign_drafts]]
 
+**⚠️ बॉडी का 4 × ₹100 matrix अभी लागू नहीं:** पहला pilot Option A है — ₹100/day **कुल**, 7 दिन, केवल `static03` ([[Ads/Strategy/Campaign-Strategy]], [[Ads/Decisions/Decision-Log]])। Pilot के नतीजों के बाद owner इस matrix को चालू या संशोधित करेगा; तब तक कुल budget ₹100/day है।
+
 ---
 
 ## 1. Budget Discipline & Testing Window (Strict 7-Day Lockdown — **RESOLVED 2026-10-27**)

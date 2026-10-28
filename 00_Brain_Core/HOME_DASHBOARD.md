@@ -3,7 +3,7 @@
 > **Decision Lead:** [[user_profile|Prashant Jaiswal]]
 > **Domain:** [doctorsofsoul.co.in](https://doctorsofsoul.co.in)
 > **Core Philosophy:** [[soul|Advaita, Nervous System Regulation & Conscious Agency]]
-> **Last full sync:** 2026-10-27 (repo, campaign docs and every note below were checked today)
+> **Last full sync:** 2026-10-28 (repo `origin/main` `82658b2`, campaign docs and every note below re-checked)
 
 **Read in this order:** [[2026-10-27_truth_pass]] (what is actually true) → [[campaign_v2_plan_2026-10-27]] (what is prepared) → the progress table below.
 
@@ -138,7 +138,7 @@ Repo: `C:\Users\ASUS\Desktop\doctorsofsoul` · repo status page: not committed t
 
 | Branch / ref | Head | State | What it adds |
 |---|---|---|---|
-| `origin/main` | `802ffed` | **Deployed / live** | Bilingual site, Razorpay live, meeting booking |
+| `origin/main` | `82658b2` | **Deployed / live** | Bilingual site, Razorpay live, meeting booking, Meta/CAPI tracking code, landing rules, repo→vault ledger sync (`cc7da3a`) |
 | `fix/technical-seo-and-utm` | `883be7a` (main) | **Merged as PR #64, deployed 2026-10-27** (`/sitemap.xml` and `/robots.txt` return 200) | UTM-preserving redirects, sitemap, robots, canonical/hreflang, Book/Product + Service JSON-LD, removed locale `noindex` |
 | `feat/book-pitch-and-meeting-copy` | `c5661a7` | **Merged as PR #63** | Landing alignment, campaign v2 creatives, creative registry + ledger, owner's final Hindi creative adopted as `static05`, `static01` archived, 4-creative campaign plan |
 
@@ -173,6 +173,7 @@ Repo: `C:\Users\ASUS\Desktop\doctorsofsoul` · repo status page: not committed t
 
 ## 🗓️ Sync log
 
+- **2026-10-28** — repo→vault one-way ledger sync merged (`cc7da3a`, PR #67) and run: `Ads/Reports/Repo-Sync.md` now generated from `82658b2`; Option A (₹100/day, 7 din, static03) marked as the only active plan and the 4×₹100 matrix flagged inactive; Meta launch sheet `utm_content` corrected from the file name to `static03`; Tracking QA still 0/7, campaign still not created.
 - **2026-10-27** — truth pass; prices/UTM corrected; campaign v2 prepared; SEO/UTM branch built and verified; locale `noindex` removed; every note indexed here with a status label and the progress table above; creative registry + performance ledger + tested report tool added (branch `feat/book-pitch-and-meeting-copy` `525aa9e`, 0 runs recorded); `static01/02` copy revised per owner and reissued at 1080×1080 (deity imagery retained → still CONFLICT); `static05` added as the owner's safe-copy test and revised same day (smaller type, zoomed-out scenery, watermark removed; copy clean, deity image still CONFLICT). Owner then supplied the final Hindi artwork and deleted the earlier generated files (Hindi trio plus `global_oracle_v2_1080.png`): `static05` now points at `/ads/hindi_navratri_final_1080.png` (exact 800×800 source kept, 1080 delivery upscale); `static01` and `static02` archived, so only `static03`–`static05` are runnable; the 4-bucket campaign plan recorded (`c5661a7`).
 - **2026-10-26** — budget/bridge strategy decisions; SEO audit; decision memo (now marked UNVERIFIED).
 
