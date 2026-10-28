@@ -14,3 +14,12 @@ venv/
 # Obsidian workspace layout (preserves custom graph.json and app.json, ignores temporary local workspace state)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+
+# Campaign sync must contain reports/notes only; never commit credentials or exports.
+.env
+.env.*
+*.token
+*.secret
+*credentials*.json
+*service-account*.json
+Ads/Exports/
